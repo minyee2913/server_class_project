@@ -1,0 +1,8 @@
+시험 문제 채점 도움기
+
+총점, 문제수 먼저 입력
+
+각 문제마다 정답 여부랑 배점 입력
+
+파일 이 에 요
+https://github.com/minyee2913/server_class_project
