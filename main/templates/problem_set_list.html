@@ -22,7 +22,7 @@
             <thead>
                 <tr>
                     <th>시험 이름</th>
-                    <th>총점</th>
+                    <th>점수</th>
                     <th>문제 수</th>
                     <th>생성일</th>
                     <th>상세보기</th>
@@ -32,7 +32,7 @@
                 {% for problem_set in problem_sets %}
                 <tr>
                     <td>{{ problem_set.name }}</td>
-                    <td>{{ problem_set.total_score }}</td>
+                    <td>{{ problem_set.total_score }} / {{ problem_set.default_total_score }}</td>
                     <td>{{ problem_set.total_problems }}</td>
                     <td>{{ problem_set.created_at }}</td>
                     <td><a href="{% url 'problem_set_edit' problem_set.id %}">상세보기</a><br><a href="{% url 'problem_set_delete' problem_set.id %}">삭제</a></td>
