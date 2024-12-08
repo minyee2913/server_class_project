@@ -31,6 +31,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'minyee2913.net',
     'test-helper.onrender.com',
+    'testhelper.minyee2913.net',
 ]
 
 
