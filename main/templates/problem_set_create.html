@@ -16,8 +16,8 @@
         <h1>시험 세트 추가</h1>
         <form method="POST">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">저장</button>
+            {{ problem_set_form.as_p }}
+            <button type="submit" class="add-problem-set-btn">저장</button>
         </form>
 
         <a href="{% url 'problem_set_list' %}">시험 목록으로 돌아가기</a>

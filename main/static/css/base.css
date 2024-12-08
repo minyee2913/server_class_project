@@ -48,7 +48,7 @@ tr:hover {
 }
 
 /* 버튼 스타일 */
-.add-problem-set-btn {
+.add-problem-set-btn, button {
     display: inline-block;
     padding: 12px 24px;
     background-color: #f19c42;  /* 살구색 */
@@ -57,55 +57,61 @@ tr:hover {
     border-radius: 30px;  /* 동글동글한 버튼 */
     font-size: 18px;
     margin-bottom: 20px;
-    transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-.add-problem-set-btn:hover {
-    background-color: #e68929;  /* 버튼 호버 시 어두운 살구색 */
-    transform: scale(1.1);  /* 호버 시 버튼 크기 커짐 */
-}
-
-.add-problem-set-btn:active {
-    transform: scale(0.95);  /* 클릭 시 버튼 크기 약간 작아짐 */
-}
-
-/* 링크 스타일 */
-a {
-    color: #f19c42;  /* 살구색 */
-    text-decoration: none;
-    font-size: 16px;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a:active {
-    color: #e68929;
-}
-
-/* 테이블 버튼 스타일 */
-button {
-    background-color: #f19c42;
     border: none;
-    color: white;
-    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.add-problem-set-btn:hover, button:hover {
+    background-color: #e68a29;  /* 더 어두운 살구색 */
+}
+
+/* 텍스트 입력 필드 스타일 */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 16px;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #f19c42;
+    outline: none;
+}
+
+input[type="number"], textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="number"]:focus, textarea:focus {
+    border-color: #f19c42;
+    outline: none;
+}
+
+/* 홈 버튼 스타일 */
+nav a {
+    padding: 10px 20px;
+    background-color: #f19c42;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
     border-radius: 25px;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 15px;
 }
 
-button:hover {
+nav a:hover {
     background-color: #e68929;
-    transform: scale(1.05); /* 호버 시 버튼 크기 커짐 */
+    transform: scale(1.05);
 }
 
-button:active {
-    background-color: #c77724; /* 클릭 시 버튼 어두워짐 */
+nav a:active {
+    background-color: #c77724;
     transform: scale(0.95);
-}
-
-/* 부드러운 애니메이션을 위한 테이블 */
-tbody tr {
-    transition: background-color 0.3s ease;
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ problem_set.name }} - 문제 세트 삭제</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .delete-message {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-delete {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .btn-cancel {
+            background-color: #ccc;
+            color: white;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+        .btn-delete:hover {
+            background-color: #ff1a1a;
+        }
+        .btn-cancel:hover {
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>{{ problem_set.name }} 문제 세트 삭제 확인</h1>
+        
+        <div class="delete-message">
+            <p>정말로 이 문제 세트를 삭제하시겠습니까?</p>
+            <p>삭제된 문제 세트는 복구할 수 없습니다.</p>
+        </div>
+        
+        <div class="button-container">
+            <form method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-delete">삭제</button>
+            </form>
+            <a href="{% url 'problem_set_list' %}">
+                <button type="button" class="btn btn-cancel">취소</button>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

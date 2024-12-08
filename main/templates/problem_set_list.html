@@ -35,7 +35,7 @@
                     <td>{{ problem_set.total_score }}</td>
                     <td>{{ problem_set.total_problems }}</td>
                     <td>{{ problem_set.created_at }}</td>
-                    <td><a href="{% url 'problem_set_edit' problem_set.id %}">상세보기</a></td>
+                    <td><a href="{% url 'problem_set_edit' problem_set.id %}">상세보기</a><br><a href="{% url 'problem_set_delete' problem_set.id %}">삭제</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
