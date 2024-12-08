@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시험 목록</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="/">홈</a>
+    </nav>
+
+    <div class="container">
+        <h1>시험 목록</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>시험 이름</th>
+                    <th>총점</th>
+                    <th>문제 수</th>
+                    <th>생성일</th>
+                    <th>상세보기</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for problem_set in problem_sets %}
+                <tr>
+                    <td>{{ problem_set.name }}</td>
+                    <td>{{ problem_set.total_score }}</td>
+                    <td>{{ problem_set.total_problems }}</td>
+                    <td>{{ problem_set.created_at }}</td>
+                    <td><a href="{% url 'problem_set_edit' problem_set.id %}">상세보기</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'problem_set_create' %}">
+            <button>시험 세트 추가</button>
+        </a>
+    </div>
+</body>
+</html>
