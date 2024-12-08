@@ -19,12 +19,8 @@ class ProblemSet(models.Model):
         for problem in problems:
             if not problem.success:
                 total_score = total_score - problem.score
-                
-        correct_count = sum(1 for problem in problems if problem.success)
-        total_problems = problems.count()
 
         self.total_score = total_score
-        self.total_problems = total_problems
         self.save()
 
     def __str__(self):
