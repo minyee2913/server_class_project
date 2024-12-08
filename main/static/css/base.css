@@ -1,108 +1,111 @@
-/* base.css */
+/* 전체 배경 색상 및 폰트 설정 */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f6f1;  /* 살구색 느낌의 배경 */
     color: #333;
     margin: 0;
     padding: 0;
 }
 
-nav {
-    background-color: #4285f4;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
 .container {
-    width: 90%;
-    max-width: 1000px;
-    margin: 20px auto;
+    width: 80%;
+    margin: 0 auto;
     padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    color: #4285f4;
+/* 헤더 스타일 */
+h1, h2 {
+    color: #f19c42;  /* 살구색 */
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-button {
-    background-color: #4285f4;
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f19c42;  /* 살구색 */
     color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
 }
 
-button:hover {
-    background-color: #357ae8;
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-a {
-    color: #4285f4;
+tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* 버튼 스타일 */
+.add-problem-set-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #f19c42;  /* 살구색 */
+    color: white;
     text-decoration: none;
+    border-radius: 30px;  /* 동글동글한 버튼 */
+    font-size: 18px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.add-problem-set-btn:hover {
+    background-color: #e68929;  /* 버튼 호버 시 어두운 살구색 */
+    transform: scale(1.1);  /* 호버 시 버튼 크기 커짐 */
+}
+
+.add-problem-set-btn:active {
+    transform: scale(0.95);  /* 클릭 시 버튼 크기 약간 작아짐 */
+}
+
+/* 링크 스타일 */
+a {
+    color: #f19c42;  /* 살구색 */
+    text-decoration: none;
+    font-size: 16px;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+a:active {
+    color: #e68929;
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+/* 테이블 버튼 스타일 */
+button {
+    background-color: #f19c42;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-th {
-    background-color: #f1f1f1;
+button:hover {
+    background-color: #e68929;
+    transform: scale(1.05); /* 호버 시 버튼 크기 커짐 */
 }
 
-form {
-    margin-top: 20px;
+button:active {
+    background-color: #c77724; /* 클릭 시 버튼 어두워짐 */
+    transform: scale(0.95);
 }
 
-form input, form select, form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form textarea {
-    resize: vertical;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background-color: #f9f9f9;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
+/* 부드러운 애니메이션을 위한 테이블 */
+tbody tr {
+    transition: background-color 0.3s ease;
 }

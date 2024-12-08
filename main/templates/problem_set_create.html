@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ problem_set.name }} - 문제 추가</title>
+    <title>시험 세트 추가</title>
+    {% load static %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
@@ -12,21 +13,12 @@
     </nav>
 
     <div class="container">
-        <h1>{{ problem_set.name }} - 문제 추가</h1>
-
-        <h2>문제 추가</h2>
+        <h1>시험 세트 추가</h1>
         <form method="POST">
             {% csrf_token %}
-            {{ problem_form.as_p }}
-            <button type="submit">문제 추가</button>
+            {{ form.as_p }}
+            <button type="submit">저장</button>
         </form>
-
-        <h2>문제 목록</h2>
-        <ul>
-            {% for problem in problems %}
-            <li>문제 {{ problem.order }}: {{ problem.question_text }} - 점수: {{ problem.score }}</li>
-            {% endfor %}
-        </ul>
 
         <a href="{% url 'problem_set_list' %}">시험 목록으로 돌아가기</a>
     </div>

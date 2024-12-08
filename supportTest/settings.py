@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [BASE_DIR / "exam_app/static"]
+STATICFILES_DIRS = [BASE_DIR / "main/static"]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

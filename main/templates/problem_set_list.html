@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>시험 목록</title>
+    {% load static %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
@@ -13,6 +14,10 @@
 
     <div class="container">
         <h1>시험 목록</h1>
+
+        <!-- 시험 세트 추가 버튼 -->
+        <a href="{% url 'problem_set_create' %}" class="add-problem-set-btn">시험 세트 추가</a>
+
         <table>
             <thead>
                 <tr>
@@ -35,9 +40,7 @@
                 {% endfor %}
             </tbody>
         </table>
-        <a href="{% url 'problem_set_create' %}">
-            <button>시험 세트 추가</button>
-        </a>
+
     </div>
 </body>
 </html>
